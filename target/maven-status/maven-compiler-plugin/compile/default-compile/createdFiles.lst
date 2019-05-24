@@ -1,10 +1,11 @@
 com\pavelk\connection\ConnectionToServer.class
+com\pavelk\cells\External3GCell.class
 com\pavelk\cells\Cell.class
 com\pavelk\Main.class
 com\pavelk\AccessData.class
-com\pavelk\cells\ExternalCell.class
 com\pavelk\comparation\ImplementComparation.class
 com\pavelk\cells\ResultCell.class
 com\pavelk\connection\FtpConnectionToServer.class
 com\pavelk\connection\SftpConnectionToServer.class
+com\pavelk\servlets\Result.class
 com\pavelk\comparation\Comparation.class
