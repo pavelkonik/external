@@ -5,21 +5,17 @@
 </head>
 
 <body >
-<div >
-    <h1>Access to server</h1>
-</div>
-
 
 <div >
     <div >
         <h2>Aaccess ot Server</h2>
     </div>
-    <form method="post" action = "location.href='/result'">
-        <label>Name:
-            <input type="text" name="name" ><br />
+    <form action = "/result" method="post" >
+        <label>Server IP:
+            <input type="text" name="serverIP" ><br />
         </label>
         <label>Name:
-            <input type="text" name="name"><br />
+            <input type="text" name="user"><br />
         </label>
         <label>Password:
             <input type="password" name="pass" ><br />

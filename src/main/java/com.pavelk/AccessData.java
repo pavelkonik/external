@@ -8,6 +8,31 @@ public class AccessData {
     String protocol;
     String pathToFiles;
 
+    private AccessData accessData;
+    public void setIP(String IP) {
+        this.IP = IP;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+    public void setProtocol(String protocol) {
+        this.protocol = protocol;
+    }
+
+    public void setPathToFiles(String pathToFiles) {
+        this.pathToFiles = pathToFiles;
+    }
+
     public AccessData() {
     }
 
@@ -58,7 +83,7 @@ public class AccessData {
         return pathToFiles;
     }
 
-    public AccessData getData() {
-        return null;
-    }
+//    public AccessData getAccessData) {
+//        return getAccessData;
+//    }
 }
