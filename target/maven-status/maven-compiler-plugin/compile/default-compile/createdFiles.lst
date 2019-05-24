@@ -9,3 +9,4 @@ com\pavelk\connection\FtpConnectionToServer.class
 com\pavelk\connection\SftpConnectionToServer.class
 com\pavelk\servlets\Result.class
 com\pavelk\comparation\Comparation.class
+com\pavelk\model\Model.class

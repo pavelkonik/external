@@ -17,4 +17,12 @@ public class Result extends HttpServlet {
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/result.jsp");
         requestDispatcher.forward(req, resp);
     }
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        Model model = Model.getInstance();
+//        List<String> names = model.list();
+//        req.setAttribute("userNames", names);
+
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/result.jsp");
+        requestDispatcher.forward(req, resp);
+    }
 }

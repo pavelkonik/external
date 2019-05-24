@@ -11,6 +11,12 @@ public class AccessData {
     public AccessData() {
     }
 
+    public AccessData(String IP, String user, String password) {
+        this.IP = IP;
+        this.user = user;
+        this.password = password;
+    }
+
     public AccessData(String IP, String user, String password, int port, String protocol) {
         this.IP = IP;
         this.user = user;
