@@ -15,9 +15,6 @@ import java.util.List;
 
 public class Result extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        Model model = Model.getInstance();
-//        List<String> names = model.list();
-//        req.setAttribute("userNames", names);
 
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/result.jsp");
         requestDispatcher.forward(req, resp);

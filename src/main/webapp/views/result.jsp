@@ -1,3 +1,4 @@
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,7 @@
 <body>
 <div>
 <%
+
                     List<String> listCfgmmlFiles = (List<String>) request.getAttribute("listCfgmmlFiles");
 
                     if (listCfgmmlFiles != null && !listCfgmmlFiles.isEmpty()) {
@@ -17,7 +19,14 @@
                         out.println("</ul>");
 
                     } else out.println("<div >\n"  + "   <h5>There are no files</h5>\n" + "</div>");
-                %>
+%>
+<form action = "/result" method="post" >
+ <label>Enter RNCs (comma separator, only number):
+  <input type="text" name="rncs" ><br />
+ </label>
+ <button type="submit" >go</button>
+</form>
+
 </div>
 </body>
 </html>
