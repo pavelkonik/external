@@ -21,6 +21,7 @@ public class Result extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      // req.getParameter("RNCs");
         Model model = Model.getInstance();
         AccessData accessData = model.setAccessData(req);
         List<String> stringList = null;
