@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:23:49:07 +0300] "GET / HTTP/1.1" 200 570 http-bio-8888-exec-1 885
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:23:49:33 +0300] "POST /result HTTP/1.1" 200 2791 http-bio-8888-exec-3 18708
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:23:49:53 +0300] "POST /selectRnc HTTP/1.1" 200 378 http-bio-8888-exec-4 10489
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:23:51:22 +0300] "POST /selectRnc HTTP/1.1" 200 378 http-bio-8888-exec-6 74431
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:23:53:39 +0300] "POST /result HTTP/1.1" 200 2792 http-bio-8888-exec-9 800
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:23:55:47 +0300] "POST /result HTTP/1.1" 200 2808 http-bio-8888-exec-3 59177
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:23:55:57 +0300] "GET /selectRnc HTTP/1.1" 200 445 http-bio-8888-exec-4 3
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:23:59:08 +0300] "GET /selectRnc HTTP/1.1" 200 461 http-bio-8888-exec-6 69
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:23:59:10 +0300] "GET /selectRnc HTTP/1.1" 200 461 http-bio-8888-exec-6 1
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:23:59:10 +0300] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8888-exec-6 3
+0:0:0:0:0:0:0:1 - - [06/Jun/2019:23:59:19 +0300] "POST /location.href='/selectRnc' HTTP/1.1" 404 1003 http-bio-8888-exec-6 1

@@ -69,7 +69,7 @@ public class Model {
     public List<String> getListRnc(HttpServletRequest req) {
         String rncs = req.getParameter("rncs");
         List<String> rncsList = Arrays.asList(rncs.split(","));
-        for (int i = 0; i <rncsList.size() ; i++) {
+        for (int i = 0; i < rncsList.size(); i++) {
             if (rncsList.get(i).trim().matches("[1-9]+")) rncListForCheckExtPsc.add(rncsList.get(i).trim());
         }
         return rncListForCheckExtPsc;
@@ -77,7 +77,7 @@ public class Model {
 
     public List<ResultCell> defIncorrectExternalPsc() {
         ConnectionToServer connectionToServer = new SftpConnectionToServer();
-        connectionToServer.getCfgmmlDataFromServer(accessData,getPathToRnc(rncListForCheckExtPsc));
+        connectionToServer.getCfgmmlDataFromServer(accessData, getPathToRnc(rncListForCheckExtPsc));
         Comparation comparation = null;
         if (cellList != null)
             comparation = new ImplementComparation();
@@ -91,26 +91,26 @@ public class Model {
 
     }
 
-    private static List<String> getPathToRnc(List<String> filesNamList) {
-        System.out.println("Enter RNCs Id then exit");
-        //    String result = "";
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int RncId = 0;
-        List<Integer> listRnc = new ArrayList<>();
+    private List<String> getPathToRnc(List<String> listRnc) {
+//        System.out.println("Enter RNCs Id then exit");
+// //        String result = "";
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+//        int RncId = 0;
+//        List<Integer> listRnc = new ArrayList<>();
         List<String> result = new ArrayList<>();
-        String s = "";
-        try {
-            while (!(s = reader.readLine()).equals("exit")) {
-                RncId = Integer.parseInt(s);
-                listRnc.add(RncId);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        String s = "";
+//        try {
+//            while (!(s = reader.readLine()).equals("exit")) {
+//                RncId = Integer.parseInt(s);
+//                listRnc.add(RncId);
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         for (int i = 0; i < listRnc.size(); i++) {
             long maxData = 0;
-            for (String str : filesNamList) {
+            for (String str : cfgmmlFilesList) {
                 if (str.contains("RNC" + listRnc.get(i))) {
                     Long data = Long.parseLong(str.split("-")[3].substring(0, 14));
                     if (data > maxData)
@@ -118,7 +118,7 @@ public class Model {
                 }
             }
 
-            for (String str : filesNamList) {
+            for (String str : cfgmmlFilesList) {
                 if (str.contains("RNC" + listRnc.get(i)) && str.contains(Long.toString(maxData))) {
                     result.add(str);
                     break;

@@ -20,17 +20,18 @@
 
                     } else out.println("<div >\n"  + "   <h5>There are no files</h5>\n" + "</div>");
 %>
-
+<!--
 <form action = "/selectRnc" method="post" name = "RNCs">
  <label>Enter RNCs (comma separator, only number):
   <input type="text" name="rncs" ><br />
  </label>
  <button type="submit" >go</button>
 </form>
+-->
 
-<!--<div>
-    <button onclick="/selectRnc">Select RNCs</button>
-</div> -->
+<div>
+    <button onclick="location.href='/selectRnc'">Select RNCs</button>
+</div>
 
 </div>
 </body>

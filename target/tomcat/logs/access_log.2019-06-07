@@ -1,0 +1,3 @@
+0:0:0:0:0:0:0:1 - - [07/Jun/2019:00:00:43 +0300] "POST /location.href='/selectRnc' HTTP/1.1" 404 1003 http-bio-8888-exec-7 1
+0:0:0:0:0:0:0:1 - - [07/Jun/2019:00:00:47 +0300] "GET /selectRnc HTTP/1.1" 200 445 http-bio-8888-exec-7 76
+0:0:0:0:0:0:0:1 - - [07/Jun/2019:00:00:47 +0300] "POST /selectRnc HTTP/1.1" 200 378 http-bio-8888-exec-4 282826

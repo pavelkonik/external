@@ -1,4 +1,5 @@
 <%@ page import="java.util.List" %>
+<%@ page import='com.pavelk.cells.*' %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,23 @@
  </label>
  <button type="submit" >go</button>
 </form>
+
+<%
+
+List<ResultCell> listIncorrectExtPsc = (List<ResultCell>) request.getAttribute("listIncorrectExtPSC");
+
+if (listIncorrectExtPsc == null) out.println("<div >\n"  + "   <h5>There is not external cells with incorrect PSC</h5>\n" + "</div>");
+        else{
+            out.println("<ul >");
+            for (ResultCell resultCell : listIncorrectExtPsc) {
+            out.println("<li >" + resultCell.getCell().getCellName() +
+                                                          " on " + resultCell.getCell().getRnc() + "RNC with PSC = " + resultCell.getCell().getPsc() +
+                                                          " has external with PSC = " + resultCell.getExternalCell().getPsc() + " on "
+                                                          + resultCell.getExternalCell().getRnc() + "RNC" + "</li>");
+            out.println("</ul >");
+            }
+        }
+%>
 
 </div>
 </body>
