@@ -1,6 +1,7 @@
 package com.pavelk.servlets;
 
 import com.pavelk.AccessData;
+import com.pavelk.cells.ResultCell;
 import com.pavelk.model.Model;
 
 import javax.servlet.RequestDispatcher;
@@ -9,30 +10,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-//@WebServlet(name = "Result", urlPatterns = "/result")
+import static com.pavelk.cells.ResultCell.resultCellList;
 
-public class Result extends HttpServlet {
+public class SelectRnc extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/result.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/selectRnc.jsp");
         requestDispatcher.forward(req, resp);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Model model = Model.getInstance();
+        List<String> listRnc =model.getListRnc(req);
+        List<ResultCell> listIncorrectExtPsc =model.defIncorrectExternalPsc();
 
-        AccessData accessData = model.setAccessData(req);
-        List<String> stringList = null;
-        if (accessData.getUser()!=null) {
-            stringList = model.getCfgmmlFilesListMethod();
+        if (listRnc!=null) {
+            req.setAttribute("listIncorrectExtPSC", listIncorrectExtPsc);
         }
-//
-        if (stringList!=null) {
-            req.setAttribute("listCfgmmlFiles", stringList);
-        }
+
         doGet(req, resp);
 
     }
 }
+

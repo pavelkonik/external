@@ -16,4 +16,15 @@
     <url-pattern>/result</url-pattern>
   </servlet-mapping>
 
+
+  <servlet>
+    <servlet-name>selectRnc</servlet-name>
+    <servlet-class>com.pavelk.servlets.SelectRnc</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>selectRnc</servlet-name>
+    <url-pattern>/selectRnc</url-pattern>
+  </servlet-mapping>
+
 </web-app>
