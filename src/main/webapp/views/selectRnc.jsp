@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import='com.pavelk.cells.*' %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,8 @@
  <button type="submit" >go</button>
 </form>
 
+
+<!--
 <%
 
 List<ResultCell> listIncorrectExtPsc = (List<ResultCell>) request.getAttribute("listIncorrectExtPSC");
@@ -32,7 +35,7 @@ if (listIncorrectExtPsc == null) out.println("<div >\n"  + "   <h5>There is not 
             }
         }
 %>
-
+-->
 </div>
 </body>
 </html>

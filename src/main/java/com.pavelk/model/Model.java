@@ -1,11 +1,14 @@
 package com.pavelk.model;
 
 import com.pavelk.AccessData;
+import com.pavelk.Main;
 import com.pavelk.cells.ResultCell;
 import com.pavelk.comparation.Comparation;
 import com.pavelk.comparation.ImplementComparation;
 import com.pavelk.connection.ConnectionToServer;
 import com.pavelk.connection.SftpConnectionToServer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;
@@ -19,6 +22,8 @@ import static com.pavelk.cells.Cell.cellList;
 import static com.pavelk.cells.ResultCell.resultCellList;
 
 public class Model {
+    private static final Logger logger2 = LoggerFactory.getLogger(Model.class);
+
     private static Model instance = new Model();
     private AccessData accessData;
 
@@ -70,7 +75,8 @@ public class Model {
         String rncs = req.getParameter("rncs");
         List<String> rncsList = Arrays.asList(rncs.split(","));
         for (int i = 0; i < rncsList.size(); i++) {
-            if (rncsList.get(i).trim().matches("[1-9]+")) rncListForCheckExtPsc.add(rncsList.get(i).trim());
+            if (rncsList.get(i).trim().matches("[0-9]+"))
+                rncListForCheckExtPsc.add(rncsList.get(i).trim());
         }
         return rncListForCheckExtPsc;
     }

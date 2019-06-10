@@ -30,7 +30,7 @@
 -->
 
 <div>
-    <button onclick="location.href='/selectRnc'">Select RNCs</button>
+ <button onclick="location.href='/selectRnc'" >Select RNCs</button>
 </div>
 
 </div>
