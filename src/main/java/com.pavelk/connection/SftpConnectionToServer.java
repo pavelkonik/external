@@ -17,7 +17,7 @@ import static com.pavelk.cells.Cell.cellList;
 import static com.pavelk.cells.External3GCell.external3GCells;
 
 public class SftpConnectionToServer implements ConnectionToServer {
-    private static final Logger loggerSftpConnection = LoggerFactory.getLogger(Model.class);
+    private static final Logger loggerSftpConnection = LoggerFactory.getLogger(SftpConnectionToServer.class);
 
     @Override
     public void getConnection(AccessData accessData) {
@@ -114,6 +114,7 @@ public class SftpConnectionToServer implements ConnectionToServer {
     }
 
     private void getCellsFromCfgmml(InputStream inputStream) {
+
         try (ZipInputStream zipInputStream = new ZipInputStream(inputStream)) {
             ZipEntry zipEntry = zipInputStream.getNextEntry();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(zipInputStream));
@@ -125,6 +126,9 @@ public class SftpConnectionToServer implements ConnectionToServer {
             int rnc;
             int nRnc;
             while ((s = bufferedReader.readLine()) != null) {
+                if (s.contains("SET NODE:NID=")) {
+                    loggerSftpConnection.debug("str SET NODE:NID=: " + s);
+                }
                 if (s.contains("ADD UCELLSETUP:")) {
                     loggerSftpConnection.debug("str ADD UCELLSETUP: " + s);
                     cellId = Integer.parseInt(s.substring(s.indexOf("CELLID=") + 7, s.indexOf(",", s.indexOf("CELLID=") + 7)));

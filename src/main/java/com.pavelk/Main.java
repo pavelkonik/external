@@ -4,6 +4,8 @@ import com.pavelk.cells.*;
 import com.pavelk.connection.ConnectionToServer;
 import com.pavelk.connection.SftpConnectionToServer;
 import com.pavelk.comparation.*;
+//import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
