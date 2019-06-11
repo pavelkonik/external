@@ -8,9 +8,10 @@
 
 <div >
     <div >
-        <h2>Aaccess ot Server</h2>
+        <h2>Access ot Server</h2>
     </div>
-    <form action = "/result" method="post" >
+
+   <form action = "/result" method="post" >
         <label>Server IP:
             <input type="text" name="serverIP" ><br />
         </label>

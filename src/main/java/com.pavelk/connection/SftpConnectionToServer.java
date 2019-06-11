@@ -4,6 +4,9 @@ import com.jcraft.jsch.*;
 import com.pavelk.AccessData;
 import com.pavelk.cells.Cell;
 import com.pavelk.cells.External3GCell;
+import com.pavelk.model.Model;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.*;
@@ -14,6 +17,7 @@ import static com.pavelk.cells.Cell.cellList;
 import static com.pavelk.cells.External3GCell.external3GCells;
 
 public class SftpConnectionToServer implements ConnectionToServer {
+    private static final Logger loggerSftpConnection = LoggerFactory.getLogger(Model.class);
 
     @Override
     public void getConnection(AccessData accessData) {
@@ -122,6 +126,7 @@ public class SftpConnectionToServer implements ConnectionToServer {
             int nRnc;
             while ((s = bufferedReader.readLine()) != null) {
                 if (s.contains("ADD UCELLSETUP:")) {
+                    loggerSftpConnection.debug("str ADD UCELLSETUP: " + s);
                     cellId = Integer.parseInt(s.substring(s.indexOf("CELLID=") + 7, s.indexOf(",", s.indexOf("CELLID=") + 7)));
                     psc = Integer.parseInt(s.substring(s.indexOf("PSCRAMBCODE=") + 12, s.indexOf(",", s.indexOf("PSCRAMBCODE=") + 12)));
                     rnc = Integer.parseInt(s.substring(s.indexOf("LOGICRNCID=") + 11, s.indexOf(",", s.indexOf("LOGICRNCID=") + 11)));
@@ -132,6 +137,7 @@ public class SftpConnectionToServer implements ConnectionToServer {
                     cellList.add(new Cell(cellName, cellId, rnc, lac, psc));
                 }
                 if (s.contains("ADD UEXT3GCELL:")) {
+                    loggerSftpConnection.debug("str ADD UEXT3GCELL: " + s);
                     cellId = Integer.parseInt(s.substring(s.indexOf("CELLID=") + 7, s.indexOf(",", s.indexOf("CELLID=") + 7)));
                     psc = Integer.parseInt(s.substring(s.indexOf("PSCRAMBCODE=") + 12, s.indexOf(",", s.indexOf("PSCRAMBCODE=") + 12)));
                     rnc = Integer.parseInt(s.substring(s.indexOf("LOGICRNCID=") + 11, s.indexOf(",", s.indexOf("LOGICRNCID=") + 11)));
