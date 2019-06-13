@@ -4,6 +4,7 @@ import com.jcraft.jsch.*;
 import com.pavelk.AccessData;
 import com.pavelk.cells.Cell;
 import com.pavelk.cells.External3GCell;
+import com.pavelk.cells.ResultCell;
 import com.pavelk.model.Model;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +18,7 @@ import static com.pavelk.cells.Cell.cellList;
 import static com.pavelk.cells.External3GCell.external3GCells;
 
 public class SftpConnectionToServer implements ConnectionToServer {
-    private static final Logger loggerSftpConnection = LoggerFactory.getLogger(SftpConnectionToServer.class);
+    private static final Logger loggerSftpConnection = LoggerFactory.getLogger(SftpConnectionToServer.class.getSimpleName());
 
     @Override
     public void getConnection(AccessData accessData) {
@@ -114,7 +115,9 @@ public class SftpConnectionToServer implements ConnectionToServer {
     }
 
     private void getCellsFromCfgmml(InputStream inputStream) {
-
+      //  PropertyConfigurator.configure("log4j.properties");
+        List<Cell> cellsList;
+        List<External3GCell> external3GCellsList;
         try (ZipInputStream zipInputStream = new ZipInputStream(inputStream)) {
             ZipEntry zipEntry = zipInputStream.getNextEntry();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(zipInputStream));
@@ -123,17 +126,22 @@ public class SftpConnectionToServer implements ConnectionToServer {
             int cellId;
             int psc;
             int lac;
-            int rnc;
+            int rnc = 0;
             int nRnc;
             while ((s = bufferedReader.readLine()) != null) {
                 if (s.contains("SET NODE:NID=")) {
                     loggerSftpConnection.debug("str SET NODE:NID=: " + s);
+                    if (s.contains(","))
+                        rnc = Integer.parseInt(s.substring(s.indexOf("NID=") + 4, s.indexOf(",", s.indexOf("LOGICRNCID=") + 11)));
+                    else
+                        rnc = Integer.parseInt(s.substring(s.indexOf("NID=") + 4));
                 }
+
                 if (s.contains("ADD UCELLSETUP:")) {
-                    loggerSftpConnection.debug("str ADD UCELLSETUP: " + s);
+                    loggerSftpConnection.info("str ADD UCELLSETUP: " + s);
                     cellId = Integer.parseInt(s.substring(s.indexOf("CELLID=") + 7, s.indexOf(",", s.indexOf("CELLID=") + 7)));
                     psc = Integer.parseInt(s.substring(s.indexOf("PSCRAMBCODE=") + 12, s.indexOf(",", s.indexOf("PSCRAMBCODE=") + 12)));
-                    rnc = Integer.parseInt(s.substring(s.indexOf("LOGICRNCID=") + 11, s.indexOf(",", s.indexOf("LOGICRNCID=") + 11)));
+                  //  rnc = Integer.parseInt(s.substring(s.indexOf("LOGICRNCID=") + 11, s.indexOf(",", s.indexOf("LOGICRNCID=") + 11)));
                     String tmp = s.substring(s.indexOf("LAC=") + 4, s.indexOf(",", s.indexOf("LAC=") + 4));
                     lac = Integer.parseInt(tmp.substring(2), 16);
                     tmp = s.substring(s.indexOf("CELLNAME=") + 9, s.indexOf(",", s.indexOf("CELLNAME=") + 9));
@@ -144,7 +152,7 @@ public class SftpConnectionToServer implements ConnectionToServer {
                     loggerSftpConnection.debug("str ADD UEXT3GCELL: " + s);
                     cellId = Integer.parseInt(s.substring(s.indexOf("CELLID=") + 7, s.indexOf(",", s.indexOf("CELLID=") + 7)));
                     psc = Integer.parseInt(s.substring(s.indexOf("PSCRAMBCODE=") + 12, s.indexOf(",", s.indexOf("PSCRAMBCODE=") + 12)));
-                    rnc = Integer.parseInt(s.substring(s.indexOf("LOGICRNCID=") + 11, s.indexOf(",", s.indexOf("LOGICRNCID=") + 11)));
+                 //   rnc = Integer.parseInt(s.substring(s.indexOf("LOGICRNCID=") + 11, s.indexOf(",", s.indexOf("LOGICRNCID=") + 11)));
                     String tmp = s.substring(s.indexOf("LAC=") + 4, s.indexOf(",", s.indexOf("LAC=") + 4));
                     lac = Integer.parseInt(tmp.substring(2), 16);
                     tmp = s.substring(s.indexOf("CELLNAME=") + 9, s.indexOf(",", s.indexOf("CELLNAME=") + 9));
@@ -158,7 +166,6 @@ public class SftpConnectionToServer implements ConnectionToServer {
 
         } catch (IOException e) {
             e.printStackTrace();
-
         }
 
     }

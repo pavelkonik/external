@@ -2,6 +2,8 @@ package com.pavelk.model;
 
 import com.pavelk.AccessData;
 import com.pavelk.Main;
+import com.pavelk.cells.Cell;
+import com.pavelk.cells.External3GCell;
 import com.pavelk.cells.ResultCell;
 import com.pavelk.comparation.Comparation;
 import com.pavelk.comparation.ImplementComparation;
@@ -22,10 +24,38 @@ import static com.pavelk.cells.Cell.cellList;
 import static com.pavelk.cells.ResultCell.resultCellList;
 
 public class Model {
-    private static final Logger logger2 = LoggerFactory.getLogger(Model.class);
+    private static final Logger logger2 = LoggerFactory.getLogger(Model.class.getSimpleName());
 
     private static Model instance = new Model();
     private AccessData accessData;
+
+    private List<Cell> cellsList;
+    private List<External3GCell> external3GCellsList;
+    private List<ResultCell> resultCellsList;
+
+    public List<Cell> getCellsList() {
+        return cellsList;
+    }
+
+    public void setCellsList(List<Cell> cellsList) {
+        this.cellsList = cellsList;
+    }
+
+    public List<External3GCell> getExternal3GCellsList() {
+        return external3GCellsList;
+    }
+
+    public void setExternal3GCellsList(List<External3GCell> external3GCellsList) {
+        this.external3GCellsList = external3GCellsList;
+    }
+
+    public List<ResultCell> getResultCellsList() {
+        return resultCellsList;
+    }
+
+    public void setResultCellsList(List<ResultCell> resultCellsList) {
+        this.resultCellsList = resultCellsList;
+    }
 
     private List<String> cfgmmlFilesList = new ArrayList<>();
     private List<ResultCell> incorrectExternalPsc;
@@ -91,28 +121,15 @@ public class Model {
             System.out.println("There are no cells");
             return null;
         }
+        logger2.info("before incorrectExternalPsc");
         incorrectExternalPsc = comparation.pscExternal3GComparation();
-
+        logger2.info("after incorrectExternalPsc");
         return incorrectExternalPsc;
 
     }
 
     private List<String> getPathToRnc(List<String> listRnc) {
-//        System.out.println("Enter RNCs Id then exit");
-// //        String result = "";
-//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-//        int RncId = 0;
-//        List<Integer> listRnc = new ArrayList<>();
         List<String> result = new ArrayList<>();
-//        String s = "";
-//        try {
-//            while (!(s = reader.readLine()).equals("exit")) {
-//                RncId = Integer.parseInt(s);
-//                listRnc.add(RncId);
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
 
         for (int i = 0; i < listRnc.size(); i++) {
             long maxData = 0;
