@@ -18,11 +18,11 @@
 </form>
 
 
-<!--
+
 <%
 
 List<ResultCell> listIncorrectExtPsc = (List<ResultCell>) request.getAttribute("listIncorrectExtPSC");
-
+out.println("sdfsdfsdfsdf");
 if (listIncorrectExtPsc == null) out.println("<div >\n"  + "   <h5>There is not external cells with incorrect PSC</h5>\n" + "</div>");
         else{
             out.println("<ul >");
@@ -35,7 +35,7 @@ if (listIncorrectExtPsc == null) out.println("<div >\n"  + "   <h5>There is not 
             }
         }
 %>
--->
+
 </div>
 </body>
 </html>

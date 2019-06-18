@@ -49,7 +49,7 @@ public class Main {
         }
 
         resultCellList = comparation.pscExternal3GComparation();
-        if (resultCellList == null) System.out.println("There is not external cells with incorrect PSC");
+        if (resultCellList == null || resultCellList.size() == 0) System.out.println("There is not external cells with incorrect PSC");
         else
             for (ResultCell resultCell : resultCellList) {
                 System.out.println(resultCell.getCell().getCellName() +
