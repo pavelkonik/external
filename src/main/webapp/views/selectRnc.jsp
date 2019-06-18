@@ -10,6 +10,10 @@
 <body>
 <div>
 
+<div>
+ <button onclick="location.href='/result'" >View CFGMML files</button>
+</div>
+
 <form action = "/selectRnc" method="post" name = "RNCs">
  <label>Enter RNCs (comma separator, only number):
   <input type="text" name="rncs" ><br />
@@ -22,7 +26,7 @@
 <%
 
 List<ResultCell> listIncorrectExtPsc = (List<ResultCell>) request.getAttribute("listIncorrectExtPSC");
-out.println("sdfsdfsdfsdf");
+
 if (listIncorrectExtPsc == null) out.println("<div >\n"  + "   <h5>There is not external cells with incorrect PSC</h5>\n" + "</div>");
         else{
             out.println("<ul >");
@@ -35,6 +39,12 @@ if (listIncorrectExtPsc == null) out.println("<div >\n"  + "   <h5>There is not 
             }
         }
 %>
+
+
+
+<div>
+ <button onclick="location.href='/'" >go to access data</button>
+</div>
 
 </div>
 </body>

@@ -23,15 +23,15 @@ public class Result extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Model model = Model.getInstance();
 
-        AccessData accessData = model.setAccessData(req);
-        List<String> stringList = null;
-        if (accessData.getUser()!=null) {
-            stringList = model.getCfgmmlFilesListMethod();
+        if (model.getCfgmmlFilesList() == null) {
+            model.setAccessData(req);
+            if (model.getAccessData().getUser() != null) {
+                model.getCfgmmlFilesListMethod();
+            }
         }
-//
-        if (stringList!=null) {
-            req.setAttribute("listCfgmmlFiles", stringList);
-        }
+        // if (model.getCfgmmlFilesList() != null) {
+        req.setAttribute("listCfgmmlFiles", model.getCfgmmlFilesList());
+        //  }
         doGet(req, resp);
 
     }

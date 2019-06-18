@@ -18,45 +18,45 @@ import static com.pavelk.cells.ResultCell.resultCellList;
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) {
-        System.out.println("Enter the user");
-        String user = "";
-        String pass = "";
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            user= reader.readLine();
-            System.out.println("Enter the pass");
-            pass = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        AccessData accessData = new AccessData("172.17.112.50", user, pass,
-                22, "sftp", "/opt/raw_data/huawei/sd");
-        ConnectionToServer connectionToServer = new SftpConnectionToServer();
-        List<String> filesNameList = connectionToServer.getCfgmmlFilesListFromServer(accessData);
-        for (String filesName : filesNameList) {
-            System.out.println(filesName);
-        }
-
-        List<String> listPathToRnc = getPathToRnc(filesNameList);
-        connectionToServer.getCfgmmlDataFromServer(accessData, listPathToRnc);
-
-        Comparation comparation = null;
-        if (cellList != null)
-            comparation = new ImplementComparation();
-        else {
-            System.out.println("There are no cells");
-            return;
-        }
-
-        resultCellList = comparation.pscExternal3GComparation();
-        if (resultCellList == null || resultCellList.size() == 0) System.out.println("There is not external cells with incorrect PSC");
-        else
-            for (ResultCell resultCell : resultCellList) {
-                System.out.println(resultCell.getCell().getCellName() +
-                        " on " + resultCell.getCell().getRnc() + "RNC with PSC = " + resultCell.getCell().getPsc() +
-                        " has external with PSC = " + resultCell.getExternalCell().getPsc() + " on "
-                        + resultCell.getExternalCell().getRnc() + "RNC");
-            }
+//        System.out.println("Enter the user");
+//        String user = "";
+//        String pass = "";
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+//        try {
+//            user= reader.readLine();
+//            System.out.println("Enter the pass");
+//            pass = reader.readLine();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        AccessData accessData = new AccessData("172.17.112.50", user, pass,
+//                22, "sftp", "/opt/raw_data/huawei/sd");
+//        ConnectionToServer connectionToServer = new SftpConnectionToServer();
+//        List<String> filesNameList = connectionToServer.getCfgmmlFilesListFromServer(accessData);
+//        for (String filesName : filesNameList) {
+//            System.out.println(filesName);
+//        }
+//
+//        List<String> listPathToRnc = getPathToRnc(filesNameList);
+//        connectionToServer.getCfgmmlDataFromServer(accessData, listPathToRnc);
+//
+//        Comparation comparation = null;
+//        if (cellList != null)
+//            comparation = new ImplementComparation();
+//        else {
+//            System.out.println("There are no cells");
+//            return;
+//        }
+//
+//        resultCellList = comparation.pscExternal3GComparation();
+//        if (resultCellList == null || resultCellList.size() == 0) System.out.println("There is not external cells with incorrect PSC");
+//        else
+//            for (ResultCell resultCell : resultCellList) {
+//                System.out.println(resultCell.getCell().getCellName() +
+//                        " on " + resultCell.getCell().getRnc() + "RNC with PSC = " + resultCell.getCell().getPsc() +
+//                        " has external with PSC = " + resultCell.getExternalCell().getPsc() + " on "
+//                        + resultCell.getExternalCell().getRnc() + "RNC");
+//            }
     }
 
     private static List<String> getPathToRnc(List<String> filesNamList) {

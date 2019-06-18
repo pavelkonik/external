@@ -33,6 +33,10 @@ public class Model {
     private List<External3GCell> external3GCellsList;
     private List<ResultCell> resultCellsList;
 
+    public AccessData getAccessData() {
+        return accessData;
+    }
+
     public List<Cell> getCellsList() {
         return cellsList;
     }
@@ -57,7 +61,7 @@ public class Model {
         this.resultCellsList = resultCellsList;
     }
 
-    private List<String> cfgmmlFilesList = new ArrayList<>();
+    private List<String> cfgmmlFilesList ;
     private List<ResultCell> incorrectExternalPsc;
 
     public List<ResultCell> getIncorrectExternalPsc() {
@@ -87,31 +91,33 @@ public class Model {
         return accessData;
     }
 
-    public List<String> getCfgmmlFilesListMethod() {
-
+    public void getCfgmmlFilesListMethod() {
+        cfgmmlFilesList = new ArrayList<>();
         ConnectionToServer connectionToServer = new SftpConnectionToServer();
         cfgmmlFilesList = connectionToServer.getCfgmmlFilesListFromServer(accessData);
-        return cfgmmlFilesList;
+   //     return cfgmmlFilesList;
 
     }
 
-    private List<String> rncListForCheckExtPsc = new ArrayList<>();
+    private List<String> rncListForCheckExtPsc ;
 
     public List<String> getRncListForCheckExtPsc() {
         return rncListForCheckExtPsc;
     }
 
-    public List<String> getListRnc(HttpServletRequest req) {
+    public void RncListForCheckExtPsc(HttpServletRequest req) {
+        rncListForCheckExtPsc = new ArrayList<>();
         String rncs = req.getParameter("rncs");
         List<String> rncsList = Arrays.asList(rncs.split(","));
         for (int i = 0; i < rncsList.size(); i++) {
             if (rncsList.get(i).trim().matches("[0-9]+"))
                 rncListForCheckExtPsc.add(rncsList.get(i).trim());
         }
-        return rncListForCheckExtPsc;
+    //    return rncListForCheckExtPsc;
     }
 
-    public List<ResultCell> defIncorrectExternalPsc() {
+    public void defIncorrectExternalPsc() {
+        incorrectExternalPsc = new ArrayList<>();
         ConnectionToServer connectionToServer = new SftpConnectionToServer();
         connectionToServer.getCfgmmlDataFromServer(accessData, getPathToRnc(rncListForCheckExtPsc));
         Comparation comparation = null;
@@ -119,12 +125,13 @@ public class Model {
             comparation = new ImplementComparation();
         else {
             System.out.println("There are no cells");
-            return null;
+            incorrectExternalPsc = null;
+            return ;
         }
         logger2.info("before incorrectExternalPsc");
         incorrectExternalPsc = comparation.pscExternal3GComparation();
         logger2.info("after incorrectExternalPsc");
-        return incorrectExternalPsc;
+      //  return incorrectExternalPsc;
 
     }
 

@@ -116,8 +116,10 @@ public class SftpConnectionToServer implements ConnectionToServer {
 
     private void getCellsFromCfgmml(InputStream inputStream) {
       //  PropertyConfigurator.configure("log4j.properties");
-        List<Cell> cellsList;
-        List<External3GCell> external3GCellsList;
+//        List<Cell> cellsList;
+//        List<External3GCell> external3GCellsList;
+        cellList = new ArrayList<>();
+        external3GCells = new ArrayList<>();
         try (ZipInputStream zipInputStream = new ZipInputStream(inputStream)) {
             ZipEntry zipEntry = zipInputStream.getNextEntry();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(zipInputStream));

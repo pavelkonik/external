@@ -33,6 +33,10 @@
  <button onclick="location.href='/selectRnc'" >Select RNCs</button>
 </div>
 
+<div>
+ <button onclick="location.href='/'" >go to access data</button>
+</div>
+
 </div>
 </body>
 </html>
