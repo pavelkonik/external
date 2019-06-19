@@ -23,7 +23,7 @@ public class SelectRnc extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Model model = Model.getInstance();
-        model.RncListForCheckExtPsc(req);
+        model.rncListForCheckExtPsc(req);
 
         if (model.getRncListForCheckExtPsc()!=null || model.getRncListForCheckExtPsc().size()>0 ) {
             LOGGER_SEKECT_RNC.info("before defIncorrectExternalPsc");
@@ -34,11 +34,6 @@ public class SelectRnc extends HttpServlet {
 
         LOGGER_SEKECT_RNC.info("set attr listIncorrectExtPsc");
         req.setAttribute("listIncorrectExtPSC", model.getIncorrectExternalPsc());
-
-//        if (model.getIncorrectExternalPsc()!=null) {
-//            LOGGER_SEKECT_RNC.info("set attr listIncorrectExtPsc");
-//            req.setAttribute("listIncorrectExtPSC", listIncorrectExtPsc);
-//        }
 
         LOGGER_SEKECT_RNC.info("before doGet");
         doGet(req, resp);

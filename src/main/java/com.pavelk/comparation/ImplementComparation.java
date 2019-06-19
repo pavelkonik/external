@@ -12,7 +12,7 @@ import static com.pavelk.cells.External3GCell.external3GCells;
 
 public class ImplementComparation implements Comparation{
     private static final Logger LOGGER = LoggerFactory.getLogger(ImplementComparation.class.getSimpleName());
-    private List<ResultCell> pscExternal3GIncorrect = new ArrayList<>();
+    private List<ResultCell> pscExternal3GIncorrect;
 
     public List<ResultCell> getPscExternal3GIncorrect() {
         return pscExternal3GIncorrect;
@@ -20,9 +20,10 @@ public class ImplementComparation implements Comparation{
 
     @Override
     public List<ResultCell> pscExternal3GComparation() {
-      //  pscExternal3GIncorrect = new ArrayList<>();
+        pscExternal3GIncorrect = new ArrayList<>();
+        LOGGER.info("check incorrect PSC : ");
         for (int i = 0; i < external3GCells.size() ; i++) {
-
+            LOGGER.info("check " + external3GCells.get(i).getCellName());
             for (int j = 0; j <cellList.size() ; j++) {
                 if (external3GCells.get(i).getCellName().equals(cellList.get(j).getCellName())) {
                     if (external3GCells.get(i).getPsc()!= cellList.get(j).getPsc()) {

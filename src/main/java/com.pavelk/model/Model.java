@@ -1,7 +1,6 @@
 package com.pavelk.model;
 
 import com.pavelk.AccessData;
-import com.pavelk.Main;
 import com.pavelk.cells.Cell;
 import com.pavelk.cells.External3GCell;
 import com.pavelk.cells.ResultCell;
@@ -13,15 +12,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import static com.pavelk.cells.Cell.cellList;
-import static com.pavelk.cells.ResultCell.resultCellList;
 
 public class Model {
     private static final Logger logger2 = LoggerFactory.getLogger(Model.class.getSimpleName());
@@ -91,7 +86,7 @@ public class Model {
         return accessData;
     }
 
-    public void getCfgmmlFilesListMethod() {
+    public void CfgmmlFilesList() {
         cfgmmlFilesList = new ArrayList<>();
         ConnectionToServer connectionToServer = new SftpConnectionToServer();
         cfgmmlFilesList = connectionToServer.getCfgmmlFilesListFromServer(accessData);
@@ -105,7 +100,7 @@ public class Model {
         return rncListForCheckExtPsc;
     }
 
-    public void RncListForCheckExtPsc(HttpServletRequest req) {
+    public void rncListForCheckExtPsc(HttpServletRequest req) {
         rncListForCheckExtPsc = new ArrayList<>();
         String rncs = req.getParameter("rncs");
         List<String> rncsList = Arrays.asList(rncs.split(","));
@@ -119,15 +114,15 @@ public class Model {
     public void defIncorrectExternalPsc() {
         incorrectExternalPsc = new ArrayList<>();
         ConnectionToServer connectionToServer = new SftpConnectionToServer();
-        connectionToServer.getCfgmmlDataFromServer(accessData, getPathToRnc(rncListForCheckExtPsc));
-        Comparation comparation = null;
-        if (cellList != null)
-            comparation = new ImplementComparation();
-        else {
+        connectionToServer.cfgmmlDataFromServer(accessData, getPathToRnc(rncListForCheckExtPsc));
+
+        if (cellList == null) {
             System.out.println("There are no cells");
             incorrectExternalPsc = null;
             return ;
         }
+
+        Comparation comparation = new ImplementComparation();
         logger2.info("before incorrectExternalPsc");
         incorrectExternalPsc = comparation.pscExternal3GComparation();
         logger2.info("after incorrectExternalPsc");

@@ -7,13 +7,13 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
-    <servlet-name>result</servlet-name>
-    <servlet-class>com.pavelk.servlets.Result</servlet-class>
+    <servlet-name>listCfgmmlFiles</servlet-name>
+    <servlet-class>com.pavelk.servlets.ListCfgmmlFiles</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>result</servlet-name>
-    <url-pattern>/result</url-pattern>
+    <servlet-name>listCfgmmlFiles</servlet-name>
+    <url-pattern>/listCfgmmlFiles</url-pattern>
   </servlet-mapping>
 
 

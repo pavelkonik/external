@@ -8,5 +8,5 @@ public interface ConnectionToServer {
     void getConnection(AccessData accessData);
     void closeConnection();
     List<String> getCfgmmlFilesListFromServer(AccessData accessData);
-    void getCfgmmlDataFromServer(AccessData accessData, List<String> listPathToRnc);
+    void cfgmmlDataFromServer(AccessData accessData, List<String> listPathToRnc);
     }

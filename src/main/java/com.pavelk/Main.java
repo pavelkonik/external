@@ -38,7 +38,7 @@ public class Main {
 //        }
 //
 //        List<String> listPathToRnc = getPathToRnc(filesNameList);
-//        connectionToServer.getCfgmmlDataFromServer(accessData, listPathToRnc);
+//        connectionToServer.cfgmmlDataFromServer(accessData, listPathToRnc);
 //
 //        Comparation comparation = null;
 //        if (cellList != null)

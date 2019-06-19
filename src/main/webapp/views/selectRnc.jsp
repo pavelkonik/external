@@ -11,7 +11,7 @@
 <div>
 
 <div>
- <button onclick="location.href='/result'" >View CFGMML files</button>
+ <button onclick="location.href='/listCfgmmlFiles'" >View CFGMML files</button>
 </div>
 
 <form action = "/selectRnc" method="post" name = "RNCs">

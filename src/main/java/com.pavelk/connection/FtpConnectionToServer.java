@@ -26,7 +26,7 @@ public class FtpConnectionToServer implements ConnectionToServer{
     }
 
     @Override
-    public void getCfgmmlDataFromServer(AccessData accessDat, List<String> listPathToRnc) {
+    public void cfgmmlDataFromServer(AccessData accessDat, List<String> listPathToRnc) {
 
     }
 }

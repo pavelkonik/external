@@ -4,8 +4,6 @@ import com.jcraft.jsch.*;
 import com.pavelk.AccessData;
 import com.pavelk.cells.Cell;
 import com.pavelk.cells.External3GCell;
-import com.pavelk.cells.ResultCell;
-import com.pavelk.model.Model;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -72,7 +70,7 @@ public class SftpConnectionToServer implements ConnectionToServer {
     }
 
     @Override
-    public void getCfgmmlDataFromServer(AccessData accessData, List<String> listPathToRnc) {
+    public void cfgmmlDataFromServer(AccessData accessData, List<String> listPathToRnc) {
         String userName = accessData.getUser();
         String host = accessData.getIP();
         String password = accessData.getPassword();
@@ -95,7 +93,7 @@ public class SftpConnectionToServer implements ConnectionToServer {
             ChannelSftp sftp = (ChannelSftp) channel;
             for (int i = 0; i <listPathToRnc.size(); i++) {
                 inputStream = sftp.get(accessData.getPathToFiles() + "/" + listPathToRnc.get(i));
-                getCellsFromCfgmml(inputStream);
+                cellsFromCfgmml(inputStream);
             }
         } catch (JSchException e) {
             e.printStackTrace();
@@ -114,12 +112,9 @@ public class SftpConnectionToServer implements ConnectionToServer {
         }
     }
 
-    private void getCellsFromCfgmml(InputStream inputStream) {
-      //  PropertyConfigurator.configure("log4j.properties");
-//        List<Cell> cellsList;
-//        List<External3GCell> external3GCellsList;
-        cellList = new ArrayList<>();
-        external3GCells = new ArrayList<>();
+    private void cellsFromCfgmml(InputStream inputStream) {
+        cellList.clear();
+        external3GCells.clear();
         try (ZipInputStream zipInputStream = new ZipInputStream(inputStream)) {
             ZipEntry zipEntry = zipInputStream.getNextEntry();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(zipInputStream));
@@ -140,7 +135,7 @@ public class SftpConnectionToServer implements ConnectionToServer {
                 }
 
                 if (s.contains("ADD UCELLSETUP:")) {
-                    loggerSftpConnection.info("str ADD UCELLSETUP: " + s);
+             //       loggerSftpConnection.info("str ADD UCELLSETUP: " + s);
                     cellId = Integer.parseInt(s.substring(s.indexOf("CELLID=") + 7, s.indexOf(",", s.indexOf("CELLID=") + 7)));
                     psc = Integer.parseInt(s.substring(s.indexOf("PSCRAMBCODE=") + 12, s.indexOf(",", s.indexOf("PSCRAMBCODE=") + 12)));
                   //  rnc = Integer.parseInt(s.substring(s.indexOf("LOGICRNCID=") + 11, s.indexOf(",", s.indexOf("LOGICRNCID=") + 11)));
