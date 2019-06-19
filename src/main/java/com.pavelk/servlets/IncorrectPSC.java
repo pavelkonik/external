@@ -11,14 +11,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class SelectRnc extends HttpServlet {
-    private static final Logger LOGGER_SEKECT_RNC = LoggerFactory.getLogger(SelectRnc.class.getSimpleName());
+public class IncorrectPSC extends HttpServlet {
+    private static final Logger LOGGER_INCORRECT_PSC = LoggerFactory.getLogger(IncorrectPSC.class.getSimpleName());
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        LOGGER_SEKECT_RNC.info("doGet");
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/selectRnc.jsp");
-        LOGGER_SEKECT_RNC.info("before requestDispatcher.forward(req, resp)");
+        LOGGER_INCORRECT_PSC.info("doGet");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/incorrectPSC.jsp");
+        LOGGER_INCORRECT_PSC.info("before requestDispatcher.forward(req, resp)");
         requestDispatcher.forward(req, resp);
-        LOGGER_SEKECT_RNC.info("after requestDispatcher.forward(req, resp)");
+        LOGGER_INCORRECT_PSC.info("after requestDispatcher.forward(req, resp)");
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -26,16 +26,16 @@ public class SelectRnc extends HttpServlet {
         model.rncListForCheckExtPsc(req);
 
         if (model.getRncListForCheckExtPsc()!=null || model.getRncListForCheckExtPsc().size()>0 ) {
-            LOGGER_SEKECT_RNC.info("before defIncorrectExternalPsc");
+            LOGGER_INCORRECT_PSC.info("before incorrectExternalPsc");
             //  model.setCellsList();
-            model.defIncorrectExternalPsc();
+            model.incorrectExternalPsc();
         }
-        LOGGER_SEKECT_RNC.info("after defIncorrectExternalPsc");
+        LOGGER_INCORRECT_PSC.info("after incorrectExternalPsc");
 
-        LOGGER_SEKECT_RNC.info("set attr listIncorrectExtPsc");
+        LOGGER_INCORRECT_PSC.info("set attr listIncorrectExtPsc");
         req.setAttribute("listIncorrectExtPSC", model.getIncorrectExternalPsc());
 
-        LOGGER_SEKECT_RNC.info("before doGet");
+        LOGGER_INCORRECT_PSC.info("before doGet");
         doGet(req, resp);
 
     }

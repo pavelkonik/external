@@ -10,15 +10,6 @@ import java.util.Map;
 
 public class FtpConnectionToServer implements ConnectionToServer{
 
-    @Override
-    public void getConnection(AccessData accessData) {
-
-    }
-
-    @Override
-    public void closeConnection() {
-
-    }
 
     @Override
     public List<String> getCfgmmlFilesListFromServer(AccessData accessData) {

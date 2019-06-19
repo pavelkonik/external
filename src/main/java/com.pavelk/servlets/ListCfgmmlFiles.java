@@ -1,25 +1,39 @@
 package com.pavelk.servlets;
 
+import com.pavelk.connection.SftpConnectionToServer;
 import com.pavelk.model.Model;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-//@WebServlet(name = "ListCfgmmlFiles", urlPatterns = "/result")
+//@WebServlet(name = "ListCfgmmlFiles", urlPatterns = "/listCfgmmlFiles")
 
 public class ListCfgmmlFiles extends HttpServlet {
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    private static final Logger LOGGERLISTCFGMMLFILES = LoggerFactory.getLogger(ListCfgmmlFiles.class.getSimpleName());
 
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Model model = Model.getInstance();
+        LOGGERLISTCFGMMLFILES.info("select POST method");
+        LOGGERLISTCFGMMLFILES.info(req.toString());
+        if (model.getCfgmmlFilesList()!=null) {
+            req.setAttribute("listCfgmmlFiles", model.getCfgmmlFilesList());
+        }
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/listCfgmmlFiles.jsp");
         requestDispatcher.forward(req, resp);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         Model model = Model.getInstance();
+        LOGGERLISTCFGMMLFILES.info("model =  "+model.toString());
+        LOGGERLISTCFGMMLFILES.info("getCfgmmlFilesList() =  "+model.getCfgmmlFilesList());
 
         if (model.getCfgmmlFilesList() == null) {
             model.setAccessData(req);
@@ -27,6 +41,7 @@ public class ListCfgmmlFiles extends HttpServlet {
                 model.CfgmmlFilesList();
             }
         }
+        LOGGERLISTCFGMMLFILES.info("getCfgmmlFilesList() =  "+model.getCfgmmlFilesList());
         req.setAttribute("listCfgmmlFiles", model.getCfgmmlFilesList());
         doGet(req, resp);
 

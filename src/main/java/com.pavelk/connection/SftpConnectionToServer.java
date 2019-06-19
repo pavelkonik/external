@@ -18,15 +18,6 @@ import static com.pavelk.cells.External3GCell.external3GCells;
 public class SftpConnectionToServer implements ConnectionToServer {
     private static final Logger loggerSftpConnection = LoggerFactory.getLogger(SftpConnectionToServer.class.getSimpleName());
 
-    @Override
-    public void getConnection(AccessData accessData) {
-
-    }
-
-    @Override
-    public void closeConnection() {
-
-    }
 
     @Override
     public List<String> getCfgmmlFilesListFromServer(AccessData accessData) {
@@ -71,6 +62,9 @@ public class SftpConnectionToServer implements ConnectionToServer {
 
     @Override
     public void cfgmmlDataFromServer(AccessData accessData, List<String> listPathToRnc) {
+        cellList.clear();
+        external3GCells.clear();
+
         String userName = accessData.getUser();
         String host = accessData.getIP();
         String password = accessData.getPassword();
@@ -113,8 +107,8 @@ public class SftpConnectionToServer implements ConnectionToServer {
     }
 
     private void cellsFromCfgmml(InputStream inputStream) {
-        cellList.clear();
-        external3GCells.clear();
+
+        loggerSftpConnection.info(" cellsize beginning " + cellList.size());
         try (ZipInputStream zipInputStream = new ZipInputStream(inputStream)) {
             ZipEntry zipEntry = zipInputStream.getNextEntry();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(zipInputStream));
@@ -127,7 +121,7 @@ public class SftpConnectionToServer implements ConnectionToServer {
             int nRnc;
             while ((s = bufferedReader.readLine()) != null) {
                 if (s.contains("SET NODE:NID=")) {
-                    loggerSftpConnection.debug("str SET NODE:NID=: " + s);
+                  //  loggerSftpConnection.debug("str SET NODE:NID=: " + s);
                     if (s.contains(","))
                         rnc = Integer.parseInt(s.substring(s.indexOf("NID=") + 4, s.indexOf(",", s.indexOf("LOGICRNCID=") + 11)));
                     else
@@ -144,9 +138,10 @@ public class SftpConnectionToServer implements ConnectionToServer {
                     tmp = s.substring(s.indexOf("CELLNAME=") + 9, s.indexOf(",", s.indexOf("CELLNAME=") + 9));
                     cellName = tmp.substring(1, tmp.length() - 1);
                     cellList.add(new Cell(cellName, cellId, rnc, lac, psc));
+                   // loggerSftpConnection.info("str ADD UCELLSETUP: " + s);
                 }
                 if (s.contains("ADD UEXT3GCELL:")) {
-                    loggerSftpConnection.debug("str ADD UEXT3GCELL: " + s);
+                  //  loggerSftpConnection.debug("str ADD UEXT3GCELL: " + s);
                     cellId = Integer.parseInt(s.substring(s.indexOf("CELLID=") + 7, s.indexOf(",", s.indexOf("CELLID=") + 7)));
                     psc = Integer.parseInt(s.substring(s.indexOf("PSCRAMBCODE=") + 12, s.indexOf(",", s.indexOf("PSCRAMBCODE=") + 12)));
                  //   rnc = Integer.parseInt(s.substring(s.indexOf("LOGICRNCID=") + 11, s.indexOf(",", s.indexOf("LOGICRNCID=") + 11)));
@@ -156,6 +151,7 @@ public class SftpConnectionToServer implements ConnectionToServer {
                     cellName = tmp.substring(1, tmp.length() - 1);
                     nRnc = Integer.parseInt(s.substring(s.indexOf("NRNCID=")+7, s.indexOf(",", s.indexOf("NRNCID=")+7)));
                     external3GCells.add(new External3GCell(cellName, cellId, rnc, lac, psc, nRnc));
+                  //  loggerSftpConnection.info("str ADD UEXT3GCELL: " + s);
                 }
 
             }
@@ -164,6 +160,7 @@ public class SftpConnectionToServer implements ConnectionToServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        loggerSftpConnection.info(" cellsize end " + cellList.size());
 
     }
 

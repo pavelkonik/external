@@ -21,9 +21,8 @@ public class ImplementComparation implements Comparation{
     @Override
     public List<ResultCell> pscExternal3GComparation() {
         pscExternal3GIncorrect = new ArrayList<>();
-        LOGGER.info("check incorrect PSC : ");
         for (int i = 0; i < external3GCells.size() ; i++) {
-            LOGGER.info("check " + external3GCells.get(i).getCellName());
+        //    LOGGER.info("check " + external3GCells.get(i).getCellName());
             for (int j = 0; j <cellList.size() ; j++) {
                 if (external3GCells.get(i).getCellName().equals(cellList.get(j).getCellName())) {
                     if (external3GCells.get(i).getPsc()!= cellList.get(j).getPsc()) {
@@ -33,6 +32,7 @@ public class ImplementComparation implements Comparation{
                 }
             }
         }
+        LOGGER.info("pscExternal3GIncorrect SIZE  : " + pscExternal3GIncorrect.size());
         return pscExternal3GIncorrect;
     }
 

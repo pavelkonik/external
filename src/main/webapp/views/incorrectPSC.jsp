@@ -14,11 +14,11 @@
  <button onclick="location.href='/listCfgmmlFiles'" >View CFGMML files</button>
 </div>
 
-<form action = "/selectRnc" method="post" name = "RNCs">
+<form action = "/incorrectPSC" method="post" name = "RNCs">
  <label>Enter RNCs (comma separator, only number):
   <input type="text" name="rncs" ><br />
  </label>
- <button type="submit" >go</button>
+ <button type="submit" >Run</button>
 </form>
 
 
@@ -29,13 +29,13 @@ List<ResultCell> listIncorrectExtPsc = (List<ResultCell>) request.getAttribute("
 
 if (listIncorrectExtPsc == null) out.println("<div >\n"  + "   <h5>There is not external cells with incorrect PSC</h5>\n" + "</div>");
         else{
-            out.println("<ul >");
+        //    out.println("<ul >");
             for (ResultCell resultCell : listIncorrectExtPsc) {
             out.println("<li >" + resultCell.getCell().getCellName() +
-                                                          " on " + resultCell.getCell().getRnc() + "RNC with PSC = " + resultCell.getCell().getPsc() +
-                                                          " has external with PSC = " + resultCell.getExternalCell().getPsc() + " on "
-                                                          + resultCell.getExternalCell().getRnc() + "RNC" + "</li>");
-            out.println("</ul >");
+                        " on " + resultCell.getCell().getRnc() + " RNC with PSC = " + resultCell.getCell().getPsc() +
+                        " has external with PSC = " + resultCell.getExternalCell().getPsc() + " on "
+                         + resultCell.getExternalCell().getRnc() + " RNC" + "</li>");
+      //      out.println("</ul >");
             }
         }
 %>

@@ -4,10 +4,10 @@ com\pavelk\Main.class
 com\pavelk\AccessData.class
 com\pavelk\comparation\ImplementComparation.class
 com\pavelk\connection\SftpConnectionToServer.class
-com\pavelk\servlets\SelectRnc.class
+com\pavelk\servlets\ListCfgmmlFiles.class
+com\pavelk\servlets\IncorrectPSC.class
 com\pavelk\cells\Cell.class
 com\pavelk\cells\ResultCell.class
 com\pavelk\connection\FtpConnectionToServer.class
-com\pavelk\servlets\Result.class
 com\pavelk\comparation\Comparation.class
 com\pavelk\model\Model.class

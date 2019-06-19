@@ -1,13 +1,13 @@
-D:\Java Program\external\src\main\java\com.pavelk\connection\ConnectionToServer.java
-D:\Java Program\external\src\main\java\com.pavelk\comparation\ImplementComparation.java
-D:\Java Program\external\src\main\java\com.pavelk\cells\External3GCell.java
-D:\Java Program\external\src\main\java\com.pavelk\connection\FtpConnectionToServer.java
-D:\Java Program\external\src\main\java\com.pavelk\Main.java
-D:\Java Program\external\src\main\java\com.pavelk\servlets\SelectRnc.java
-D:\Java Program\external\src\main\java\com.pavelk\cells\ResultCell.java
-D:\Java Program\external\src\main\java\com.pavelk\model\Model.java
-D:\Java Program\external\src\main\java\com.pavelk\servlets\Result.java
-D:\Java Program\external\src\main\java\com.pavelk\connection\SftpConnectionToServer.java
-D:\Java Program\external\src\main\java\com.pavelk\AccessData.java
-D:\Java Program\external\src\main\java\com.pavelk\cells\Cell.java
-D:\Java Program\external\src\main\java\com.pavelk\comparation\Comparation.java
+D:\Java\external\src\main\java\com.pavelk\comparation\ImplementComparation.java
+D:\Java\external\src\main\java\com.pavelk\connection\ConnectionToServer.java
+D:\Java\external\src\main\java\com.pavelk\model\Model.java
+D:\Java\external\src\main\java\com.pavelk\comparation\Comparation.java
+D:\Java\external\src\main\java\com.pavelk\connection\FtpConnectionToServer.java
+D:\Java\external\src\main\java\com.pavelk\cells\ResultCell.java
+D:\Java\external\src\main\java\com.pavelk\connection\SftpConnectionToServer.java
+D:\Java\external\src\main\java\com.pavelk\servlets\ListCfgmmlFiles.java
+D:\Java\external\src\main\java\com.pavelk\cells\Cell.java
+D:\Java\external\src\main\java\com.pavelk\AccessData.java
+D:\Java\external\src\main\java\com.pavelk\servlets\IncorrectPSC.java
+D:\Java\external\src\main\java\com.pavelk\cells\External3GCell.java
+D:\Java\external\src\main\java\com.pavelk\Main.java
