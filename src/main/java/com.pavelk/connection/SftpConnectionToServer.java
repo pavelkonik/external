@@ -108,7 +108,6 @@ public class SftpConnectionToServer implements ConnectionToServer {
 
     private void cellsFromCfgmml(InputStream inputStream) {
 
-        loggerSftpConnection.info(" cellsize beginning " + cellList.size());
         try (ZipInputStream zipInputStream = new ZipInputStream(inputStream)) {
             ZipEntry zipEntry = zipInputStream.getNextEntry();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(zipInputStream));
@@ -160,7 +159,6 @@ public class SftpConnectionToServer implements ConnectionToServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        loggerSftpConnection.info(" cellsize end " + cellList.size());
 
     }
 

@@ -16,7 +16,6 @@ public class IncorrectPSC extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         LOGGER_INCORRECT_PSC.info("doGet");
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/incorrectPSC.jsp");
-        LOGGER_INCORRECT_PSC.info("before requestDispatcher.forward(req, resp)");
         requestDispatcher.forward(req, resp);
         LOGGER_INCORRECT_PSC.info("after requestDispatcher.forward(req, resp)");
     }
@@ -32,7 +31,6 @@ public class IncorrectPSC extends HttpServlet {
         }
         LOGGER_INCORRECT_PSC.info("after incorrectExternalPsc");
 
-        LOGGER_INCORRECT_PSC.info("set attr listIncorrectExtPsc");
         req.setAttribute("listIncorrectExtPSC", model.getIncorrectExternalPsc());
 
         LOGGER_INCORRECT_PSC.info("before doGet");

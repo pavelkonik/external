@@ -21,7 +21,6 @@ public class ListCfgmmlFiles extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Model model = Model.getInstance();
         LOGGERLISTCFGMMLFILES.info("select POST method");
-        LOGGERLISTCFGMMLFILES.info(req.toString());
         if (model.getCfgmmlFilesList()!=null) {
             req.setAttribute("listCfgmmlFiles", model.getCfgmmlFilesList());
         }
@@ -32,8 +31,6 @@ public class ListCfgmmlFiles extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Model model = Model.getInstance();
-        LOGGERLISTCFGMMLFILES.info("model =  "+model.toString());
-        LOGGERLISTCFGMMLFILES.info("getCfgmmlFilesList() =  "+model.getCfgmmlFilesList());
 
         if (model.getCfgmmlFilesList() == null) {
             model.setAccessData(req);
@@ -41,7 +38,6 @@ public class ListCfgmmlFiles extends HttpServlet {
                 model.CfgmmlFilesList();
             }
         }
-        LOGGERLISTCFGMMLFILES.info("getCfgmmlFilesList() =  "+model.getCfgmmlFilesList());
         req.setAttribute("listCfgmmlFiles", model.getCfgmmlFilesList());
         doGet(req, resp);
 

@@ -114,11 +114,8 @@ public class Model {
     public void incorrectExternalPsc() {
 //        logger2.info(" incorrectExternalPsc SIZE" + incorrectExternalPsc.size());
         incorrectExternalPsc = new ArrayList<>();
-        logger2.info(" cell SIZE befroe cfgmmlDataFromServer " + cellList.size());
-       // logger2.info(" incorrectExternalPsc SIZE" + incorrectExternalPsc.size());
         ConnectionToServer connectionToServer = new SftpConnectionToServer();
         connectionToServer.cfgmmlDataFromServer(accessData, getPathToRnc(rncListForCheckExtPsc));
-        logger2.info(" cell SIZE after cfgmmlDataFromServer" + cellList.size());
         if (cellList == null) {
             System.out.println("There are no cells");
             incorrectExternalPsc = null;
@@ -126,9 +123,7 @@ public class Model {
         }
 
         Comparation comparation = new ImplementComparation();
-        logger2.info("before incorrectExternalPsc");
         incorrectExternalPsc = comparation.pscExternal3GComparation();
-        logger2.info(" incorrectExternalPsc SIZE " + incorrectExternalPsc.size());
       //  return incorrectExternalPsc;
 
     }
