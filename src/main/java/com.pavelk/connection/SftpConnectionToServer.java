@@ -12,8 +12,8 @@ import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import static com.pavelk.cells.Cell.cellList;
-import static com.pavelk.cells.External3GCell.external3GCells;
+//import static com.pavelk.cells.Cell.cellList;
+//import static com.pavelk.cells.External3GCell.external3GCells;
 
 public class SftpConnectionToServer implements ConnectionToServer {
     private static final Logger loggerSftpConnection = LoggerFactory.getLogger(SftpConnectionToServer.class.getSimpleName());
@@ -62,8 +62,8 @@ public class SftpConnectionToServer implements ConnectionToServer {
 
     @Override
     public void cfgmmlDataFromServer(AccessData accessData, List<String> listPathToRnc) {
-        cellList.clear();
-        external3GCells.clear();
+        Cell.getCellList().clear();
+        External3GCell.getExternal3GCells().clear();
 
         String userName = accessData.getUser();
         String host = accessData.getIP();
@@ -136,7 +136,7 @@ public class SftpConnectionToServer implements ConnectionToServer {
                     lac = Integer.parseInt(tmp.substring(2), 16);
                     tmp = s.substring(s.indexOf("CELLNAME=") + 9, s.indexOf(",", s.indexOf("CELLNAME=") + 9));
                     cellName = tmp.substring(1, tmp.length() - 1);
-                    cellList.add(new Cell(cellName, cellId, rnc, lac, psc));
+                    Cell.addToCellList(new Cell(cellName, cellId, rnc, lac, psc));
                    // loggerSftpConnection.info("str ADD UCELLSETUP: " + s);
                 }
                 if (s.contains("ADD UEXT3GCELL:")) {
@@ -149,7 +149,7 @@ public class SftpConnectionToServer implements ConnectionToServer {
                     tmp = s.substring(s.indexOf("CELLNAME=") + 9, s.indexOf(",", s.indexOf("CELLNAME=") + 9));
                     cellName = tmp.substring(1, tmp.length() - 1);
                     nRnc = Integer.parseInt(s.substring(s.indexOf("NRNCID=")+7, s.indexOf(",", s.indexOf("NRNCID=")+7)));
-                    external3GCells.add(new External3GCell(cellName, cellId, rnc, lac, psc, nRnc));
+                    External3GCell.addToExternal3GCells(new External3GCell(cellName, cellId, rnc, lac, psc, nRnc));
                   //  loggerSftpConnection.info("str ADD UEXT3GCELL: " + s);
                 }
 

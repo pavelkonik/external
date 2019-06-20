@@ -16,7 +16,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.pavelk.cells.Cell.cellList;
+//import static com.pavelk.cells.Cell.cellList;
+import static com.pavelk.cells.Cell.getCellList;
 
 public class Model {
     private static final Logger logger2 = LoggerFactory.getLogger(Model.class.getSimpleName());
@@ -24,7 +25,7 @@ public class Model {
     private static Model instance = new Model();
     private AccessData accessData;
 
-    private List<Cell> cellsList;
+//    private List<Cell> cellsList;
     private List<External3GCell> external3GCellsList;
     private List<ResultCell> resultCellsList;
 
@@ -32,13 +33,13 @@ public class Model {
         return accessData;
     }
 
-    public List<Cell> getCellsList() {
-        return cellsList;
-    }
-
-    public void setCellsList(List<Cell> cellsList) {
-        this.cellsList = cellsList;
-    }
+//    public List<Cell> getCellsList() {
+//        return cellsList;
+//    }
+//
+//    public void setCellsList(List<Cell> cellsList) {
+//        this.cellsList = cellsList;
+//    }
 
     public List<External3GCell> getExternal3GCellsList() {
         return external3GCellsList;
@@ -116,7 +117,7 @@ public class Model {
         incorrectExternalPsc = new ArrayList<>();
         ConnectionToServer connectionToServer = new SftpConnectionToServer();
         connectionToServer.cfgmmlDataFromServer(accessData, getPathToRnc(rncListForCheckExtPsc));
-        if (cellList == null) {
+        if (getCellList() == null) {
             System.out.println("There are no cells");
             incorrectExternalPsc = null;
             return ;

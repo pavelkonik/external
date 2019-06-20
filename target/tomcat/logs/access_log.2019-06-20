@@ -1,4 +1,4 @@
-0:0:0:0:0:0:0:1 - - [20/Jun/2019:12:19:54 +0300] "GET / HTTP/1.1" 200 579 http-bio-8888-exec-1 3608
-0:0:0:0:0:0:0:1 - - [20/Jun/2019:12:20:11 +0300] "POST /listCfgmmlFiles HTTP/1.1" 200 2692 http-bio-8888-exec-4 3684
-0:0:0:0:0:0:0:1 - - [20/Jun/2019:12:20:14 +0300] "GET /incorrectPSC HTTP/1.1" 200 640 http-bio-8888-exec-6 356
-0:0:0:0:0:0:0:1 - - [20/Jun/2019:12:20:28 +0300] "POST /incorrectPSC HTTP/1.1" 200 1347 http-bio-8888-exec-8 11255
+0:0:0:0:0:0:0:1 - - [20/Jun/2019:23:35:03 +0300] "GET / HTTP/1.1" 200 579 http-bio-8888-exec-2 850
+0:0:0:0:0:0:0:1 - - [20/Jun/2019:23:35:06 +0300] "POST /listCfgmmlFiles HTTP/1.1" 200 2692 http-bio-8888-exec-3 1289
+0:0:0:0:0:0:0:1 - - [20/Jun/2019:23:35:08 +0300] "GET /incorrectPSC HTTP/1.1" 200 640 http-bio-8888-exec-4 60
+0:0:0:0:0:0:0:1 - - [20/Jun/2019:23:35:18 +0300] "POST /incorrectPSC HTTP/1.1" 200 1772 http-bio-8888-exec-5 7596

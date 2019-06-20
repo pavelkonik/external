@@ -1,5 +1,7 @@
 package com.pavelk.comparation;
 
+import com.pavelk.cells.Cell;
+import com.pavelk.cells.External3GCell;
 import com.pavelk.cells.ResultCell;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,8 +9,8 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.pavelk.cells.Cell.cellList;
-import static com.pavelk.cells.External3GCell.external3GCells;
+//import static com.pavelk.cells.Cell.cellList;
+//import static com.pavelk.cells.External3GCell.external3GCells;
 
 public class ImplementComparation implements Comparation{
     private static final Logger LOGGER = LoggerFactory.getLogger(ImplementComparation.class.getSimpleName());
@@ -21,13 +23,13 @@ public class ImplementComparation implements Comparation{
     @Override
     public List<ResultCell> pscExternal3GComparation() {
         pscExternal3GIncorrect = new ArrayList<>();
-        for (int i = 0; i < external3GCells.size() ; i++) {
+        for (int i = 0; i < External3GCell.getExternal3GCells().size() ; i++) {
         //    LOGGER.info("check " + external3GCells.get(i).getCellName());
-            for (int j = 0; j <cellList.size() ; j++) {
-                if (external3GCells.get(i).getCellName().equals(cellList.get(j).getCellName())) {
-                    if (external3GCells.get(i).getPsc()!= cellList.get(j).getPsc()) {
-                        pscExternal3GIncorrect.add(new ResultCell(cellList.get(j), external3GCells.get(i)));
-                        LOGGER.info("incorrect: " + external3GCells.get(i).getCellName());
+            for (int j = 0; j < Cell.getCellList().size() ; j++) {
+                if (External3GCell.getExternal3GCells().get(i).getCellName().equals(Cell.getCellList().get(j).getCellName())) {
+                    if (External3GCell.getExternal3GCells().get(i).getPsc()!= Cell.getCellList().get(j).getPsc()) {
+                        pscExternal3GIncorrect.add(new ResultCell(Cell.getCellList().get(j), External3GCell.getExternal3GCells().get(i)));
+                        LOGGER.info("incorrect: " + External3GCell.getExternal3GCells().get(i).getCellName());
                     }
                 }
             }

@@ -12,8 +12,8 @@ import org.slf4j.LoggerFactory;
 import java.io.*;
 import java.util.*;
 
-import static com.pavelk.cells.Cell.cellList;
-import static com.pavelk.cells.ResultCell.resultCellList;
+//import static com.pavelk.cells.Cell.cellList;
+//import static com.pavelk.cells.ResultCell.resultCellList;
 
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);

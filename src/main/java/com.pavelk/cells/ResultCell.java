@@ -5,7 +5,16 @@ import java.util.List;
 
 
 public class ResultCell extends Cell {
-    public  static List<ResultCell> resultCellList = new ArrayList<>();
+    public static List<ResultCell> getResultCellList() {
+        return resultCellList;
+    }
+
+    public static void addToResultCellList(ResultCell resultCell) {
+        if (resultCell != null)
+            resultCellList.add(resultCell);
+    }
+
+    private static List<ResultCell> resultCellList = new ArrayList<>();
 
     private Cell cell;
     private External3GCell externalCell;

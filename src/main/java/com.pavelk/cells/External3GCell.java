@@ -4,7 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class External3GCell extends Cell {
-    public static List<External3GCell> external3GCells = new ArrayList<>();
+    public static List<External3GCell> getExternal3GCells() {
+        return external3GCells;
+    }
+
+    public static void addToExternal3GCells(External3GCell external3GCell) {
+        if (external3GCell != null)
+            external3GCells.add(external3GCell);
+    }
+
+    private static List<External3GCell> external3GCells = new ArrayList<>();
 
     private int nrnc;
     private Cell cell;

@@ -4,7 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cell {
-    public static List<Cell> cellList = new ArrayList<>();
+    public static List<Cell> getCellList() {
+        return cellList;
+    }
+
+    public static void addToCellList(Cell cell) {
+        if (cell != null)
+            cellList.add(cell);
+    }
+
+    private static List<Cell> cellList = new ArrayList<>();
 
     private String cellName;
     private int cellId;
@@ -13,6 +22,7 @@ public class Cell {
     private int psc;
 
     public Cell() {
+
     }
 
     public Cell(String cellName, int cellId, int rnc, int lac, int psc) {
