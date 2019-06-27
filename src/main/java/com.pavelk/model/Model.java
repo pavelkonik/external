@@ -10,6 +10,8 @@ import com.pavelk.connection.ConnectionToServer;
 import com.pavelk.connection.SftpConnectionToServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -113,8 +115,12 @@ public class Model {
 
     public void incorrectExternalPsc() {
 //        logger2.info(" incorrectExternalPsc SIZE" + incorrectExternalPsc.size());
+        ApplicationContext context =
+                new AnnotationConfigApplicationContext("com.pavelk.connection");
+        ConnectionToServer connectionToServer = context.getBean(SftpConnectionToServer.class);
+        System.out.println(connectionToServer.toString());
         incorrectExternalPsc = new ArrayList<>();
-        ConnectionToServer connectionToServer = new SftpConnectionToServer();
+     //   ConnectionToServer connectionToServer = new SftpConnectionToServer();
         connectionToServer.cfgmmlDataFromServer(accessData, getPathToRnc(rncListForCheckExtPsc));
         if (cellList == null) {
             System.out.println("There are no cells");

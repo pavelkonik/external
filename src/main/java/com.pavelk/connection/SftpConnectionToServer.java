@@ -6,6 +6,7 @@ import com.pavelk.cells.Cell;
 import com.pavelk.cells.External3GCell;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.util.*;
@@ -14,7 +15,7 @@ import java.util.zip.ZipInputStream;
 
 import static com.pavelk.cells.Cell.cellList;
 import static com.pavelk.cells.External3GCell.external3GCells;
-
+@Component("sftpConnectionToServer")
 public class SftpConnectionToServer implements ConnectionToServer {
     private static final Logger loggerSftpConnection = LoggerFactory.getLogger(SftpConnectionToServer.class.getSimpleName());
 

@@ -18,6 +18,7 @@ import static com.pavelk.cells.ResultCell.resultCellList;
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) {
+      //  System.out.println("Asdasdasdasdasd");
 //        System.out.println("Enter the user");
 //        String user = "";
 //        String pass = "";
