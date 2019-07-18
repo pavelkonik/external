@@ -3,9 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="8547c610-3587-4707-b259-05344898d038" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/com.pavelk/cells/CellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/CellTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pavelk/cells/CellTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.pavelk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.pavelk/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.pavelk/connection/SftpConnectionToServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.pavelk/connection/SftpConnectionToServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.pavelk/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.pavelk/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pavelk/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pavelk/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pavelk/connection/SftpConnectionToServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pavelk/connection/SftpConnectionToServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pavelk/model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pavelk/model/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-20" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/index_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/views/incorrectPSC_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/views/incorrectPSC_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/views/listCfgmmlFiles_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/views/listCfgmmlFiles_jsp.java" afterDir="false" />
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,11 +42,19 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/cells/ResultCell.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+=======
+      <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/model/Model.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="121" column="49" selection-start-line="121" selection-start-column="49" selection-end-line="121" selection-end-column="49" />
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#174#175#0" expanded="true" />
@@ -95,17 +116,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1054">
               <caret line="62" column="49" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
+=======
+            <state relative-caret-position="-91">
+              <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/comparation/ImplementComparation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+=======
+      <file leaf-file-name="SftpConnectionToServer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/connection/SftpConnectionToServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1496">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,11 +147,19 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
+=======
+      <file leaf-file-name="Cell.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/cells/Cell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,11 +167,19 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/connection/SftpConnectionToServer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
+=======
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -187,6 +237,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/listCfgmmlFiles.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/incorrectPSC.jsp" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/main/java/com.pavelk/comparation/ImplementComparation.java" />
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
         <option value="$PROJECT_DIR$/src/main/java/com.pavelk/servlets/IncorrectPSC.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.pavelk/servlets/ListCfgmmlFiles.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
@@ -200,7 +254,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com.pavelk/cells/CellTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.pavelk/cells/Cell.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/test/CellTest.java" />
+=======
+        <option value="$PROJECT_DIR$/src/main/java/com.pavelk/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.pavelk/model/Model.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.pavelk/connection/SftpConnectionToServer.java" />
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
       </list>
     </option>
   </component>
@@ -221,17 +281,34 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="external Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+<<<<<<< HEAD
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+=======
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="external Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="org.springframework:spring-context:5.1.5.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
         </path>
       </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="298" />
     <option name="y" value="94" />
     <option name="width" value="1450" />
     <option name="height" value="730" />
+=======
+    <option name="x" value="11" />
+    <option name="y" value="39" />
+    <option name="width" value="1352" />
+    <option name="height" value="695" />
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -514,10 +591,44 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="298" y="94" width="1450" height="730" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49604222" visible="true" weight="0.25539568" />
+=======
+    <frame x="11" y="39" width="1352" height="695" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.44582042" weight="0.33512545" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.37538698" side_tool="true" visible="true" weight="0.3655914" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.30959752" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.499226" weight="0.3288364" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.624613" visible="true" weight="0.3655914" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49748743" visible="true" weight="0.28095976" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49613002" weight="0.32715008" />
+      <window_info id="Structure" order="1" sideWeight="0.5025126" side_tool="true" weight="0.28095976" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.69582045" weight="0.4114671" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="8" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49604222" visible="true" weight="0.25879043" />
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
       <window_info id="Structure" order="1" sideWeight="0.5039578" side_tool="true" weight="0.28482974" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Learn" order="3" sideWeight="0.49868074" weight="0.32972136" />
@@ -601,7 +712,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com.pavelk/model/Model.java</url>
+<<<<<<< HEAD
           <line>76</line>
+=======
+          <line>77</line>
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
@@ -613,13 +728,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com.pavelk/model/Model.java</url>
+<<<<<<< HEAD
           <line>129</line>
+=======
+          <line>134</line>
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com.pavelk/Main.java</url>
-          <line>42</line>
+          <line>43</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -630,7 +749,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com.pavelk/model/Model.java</url>
+<<<<<<< HEAD
           <line>100</line>
+=======
+          <line>101</line>
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
           <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
@@ -706,8 +829,111 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/selectRnc.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/servlets/SelectRnc.java" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/listCfgmmlFiles.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/selectRnc.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/connection/ConnectionToServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/connection/SftpConnectionToServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-206">
+          <caret line="97" column="35" lean-forward="true" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/comparation/Comparation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/comparation/ImplementComparation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="24" column="59" lean-forward="true" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/servlets/ListCfgmmlFiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/model/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="114" column="8" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="8" />
+          <folding>
+            <element signature="e#1956#1957#0" expanded="true" />
+            <element signature="e#1999#2000#0" expanded="true" />
+            <element signature="e#2169#2170#0" expanded="true" />
+            <element signature="e#2207#2208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/servlets/SelectRnc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16167">
@@ -740,6 +966,7 @@
       </provider>
     </entry>
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/List.java" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -748,6 +975,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/listCfgmmlFiles.jsp">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/AccessData.java">
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
@@ -841,6 +1071,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/cells/ResultCell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -854,6 +1085,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/cells/Cell.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/connection/ConnectionToServer.java">
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
@@ -865,6 +1099,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5168">
@@ -885,6 +1120,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/servlets/IncorrectPSC.java">
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1054">
           <caret line="62" column="49" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
@@ -911,6 +1149,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/connection/SftpConnectionToServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -925,6 +1164,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
+=======
+    <entry file="file://$PROJECT_DIR$/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DR07.892/com/cellwize/son/optimization/util/CommonRetSnapshot.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="23" column="58" lean-forward="true" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DR41.781/com/cellwize/son/optimization/util/CommonRetSnapshot$1.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-91">
+          <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/cells/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/model/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="121" column="49" selection-start-line="121" selection-start-column="49" selection-end-line="121" selection-end-column="49" />
+>>>>>>> 18d1b5b599b35bdca49d40c24c18392ea9b12cda
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.pavelk/connection/SftpConnectionToServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1496">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
