@@ -2,7 +2,6 @@ com\pavelk\connection\ConnectionToServer.class
 com\pavelk\cells\External3GCell.class
 com\pavelk\Main.class
 com\pavelk\AccessData.class
-com\pavelk\cells\CellTest.class
 com\pavelk\comparation\ImplementComparation.class
 com\pavelk\connection\SftpConnectionToServer.class
 com\pavelk\servlets\ListCfgmmlFiles.class

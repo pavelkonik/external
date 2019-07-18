@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: CellTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.054 s <<< FAILURE! - in CellTest
+getCellList(CellTest)  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.AssertionError: expected:<[]> but was:<[com.pavelk.cells.Cell@3c679bde, com.pavelk.cells.Cell@16b4a017, com.pavelk.cells.Cell@8807e25]>
+	at CellTest.getCellList(CellTest.java:33)
+
